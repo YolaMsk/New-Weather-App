@@ -1,0 +1,12 @@
+{
+    "terminal.integrated.allowedLinkSchemes": [
+        "file",
+        "http",
+        "https",
+        "mailto",
+        "vscode",
+        "vscode-insiders",
+        "npm install axios"
+    ],
+    "terminal.integrated.allowChords": false
+}

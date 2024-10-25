@@ -12,7 +12,7 @@ function refreshWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
 
   let timeElement = document.querySelector("#time");
-  let date = new Date(response.data.time * 1000);
+  let date = new Date(response.data.time);
   timeElement.innerHTML = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
 
   let iconElement = document.querySelector("#icon img");
@@ -21,7 +21,6 @@ function refreshWeather(response) {
 }
 
 function searchCity(city) {
-  y;
   let apiKey = "adc5tcbc786490db6do6b9402a16f53f";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(refreshWeather);
@@ -34,5 +33,6 @@ function handleSearchSubmit(event) {
   cityElement.innerHTML = searchInput.value;
   searchCity(searchInput.value);
 }
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
