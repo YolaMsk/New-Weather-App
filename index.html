@@ -14,43 +14,45 @@
             type="search"
             placeholder="Enter a city.."
             required=""
-            id="search-form-input"
+            id="search-input"
             class="search-form-input"
           />
           <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
       <main>
-        <div  class="weather-app-data">
+        <div class="weather-app-data">
           <div>
-            <h1 class="weather-app-city" id="city">Paris</h1>
+            <h1 class="weather-app-city" id="current-city">Paris</h1>
             <p class="weather-app-details">
-              <span id="time">Tuesday 20:27</span>,
+              <span id="current-date">Tuesday 20:27</span>,
               <span id="description">clear sky</span>
-              <br>
+              <br />
               Humidity: <strong id="humidity">82%</strong>, Wind:
-              <strong id="wind-speed">1.54km/h</strong>
+              <strong id="wind-speed">1.54 km/h</strong>
             </p>
           </div>
           <div class="weather-app-temperature-container">
-            <div id="icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png" class="weather-app-icon"></div>
-            <div class="weather-app-temperature" id="temperature">13</div>
-            <div class="weatehr-app-unit">°C</div>
+            <div id="icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
+                class="weather-app-icon"
+              />
+            </div>
+            <div class="weather-app-temperature" id="current-temperature">13</div>
+            <div class="weather-app-unit">°C</div>
           </div>
+        </div>
       </main>
       <footer>
         This project was coded by
-        <a href="https://github.com/YolaMsk" target="_blank"> Yolanda Masuku</a>
-        is
-        <a href="https://github.com/YolaMsk?tab=repositories" target="_blank"
-          >open-sourced on GitHub</a
-        >
+        <a href="https://github.com/YolaMsk" target="_blank">Yolanda Masuku</a>
+        and is
+        <a href="https://github.com/YolaMsk?tab=repositories" target="_blank">open-sourced on GitHub</a>
         and
-        <a href="https://relaxed-praline-9d1118.netlify.app/" target="_blank"
-          >hosted on Netlify</a
-        >
+        <a href="https://relaxed-praline-9d1118.netlify.app/" target="_blank">hosted on Netlify</a>
       </footer>
-    </div>  
-      <script src="src/index.js"></script>
-  </body>
+    </div>
+    <script src="src/index.js"></script>
+</body>
 </html>
