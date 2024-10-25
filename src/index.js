@@ -12,8 +12,14 @@ function refreshWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
 
   let timeElement = document.querySelector("#time");
-  let date = new Date(response.data.time);
-  timeElement.innerHTML = `${response.data.date.time}`;
+let date = new Date(response.data.time); 
+let dayNames= { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday: 'long' }; 
+let dayName = date.toLocaleDateString(undefined, options);
+let timeString = date.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+
+timeElement.innerHTML = `${dayName} ${timeString}`;
+
+
 
   let iconElement = document.querySelector("#icon img");
   iconElement.setAttribute("src", response.data.condition.icon_url);
