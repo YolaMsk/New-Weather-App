@@ -13,7 +13,7 @@ function refreshWeather(response) {
 
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time);
-  timeElement.innerHTML = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+  timeElement.innerHTML = `${response.data.date.time}`;
 
   let iconElement = document.querySelector("#icon img");
   iconElement.setAttribute("src", response.data.condition.icon_url);
