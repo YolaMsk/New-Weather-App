@@ -11,14 +11,14 @@ function refreshWeather(response) {
   let windElement = document.querySelector("#wind-speed");
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
 
-
   let timeElement = document.querySelector("#time");
-  let date = new Date(response.data.time); 
+  let date = new Date(); 
   let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  let dayName = days[date.getDay()]; 
-  let hours = date.getHours().toString().padStart(2, '0'); 
+  let dayName = days[date.getDay()];
+  let hours = date.getHours().toString().padStart(2, '0');
   let minutes = date.getMinutes().toString().padStart(2, '0'); 
   timeElement.innerHTML = `${dayName} ${hours}:${minutes}`;
+  
 
   let iconElement = document.querySelector("#icon img");
   iconElement.setAttribute("src", response.data.condition.icon_url);
