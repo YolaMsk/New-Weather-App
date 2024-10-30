@@ -1,3 +1,4 @@
+
 function formatDate(date) {
   let minutes = date.getMinutes().toString().padStart(2, '0');
   let hours = date.getHours().toString().padStart(2, '0');
@@ -41,9 +42,19 @@ function displayTemperature(response) {
   let currentDateElement = document.querySelector("#current-date");
   let currentDate = new Date();
   currentDateElement.innerHTML = formatDate(currentDate);
+
+  getForecast(response.data.city)
 }
 
-function displayForecast(){
+function getForecast(city){
+
+  let apiKey = "b2a5adcct04b33178913oc335f405433";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+ console.log(apiUrl);
+ axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response){
   let forecastElement =document. querySelector("#forecast");
 
   let days = ["Tue","Wed","Thu","Fri","Sat",];
@@ -80,5 +91,4 @@ function search(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-displayForecast();
 
