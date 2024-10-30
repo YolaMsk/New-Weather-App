@@ -1,5 +1,4 @@
 body {
-  border: none;
   background-color: #f9f7fe ;
   font-family: "DynaPuff", system-ui;
 }
@@ -90,8 +89,7 @@ main {
 
 .weather-forecast-icon {
   width: 22px;
-   margin: 0 5px;
-  padding-bottom: 10px;
+ text-align: center;
 }
 
 .weather-forecast-temperatures {
