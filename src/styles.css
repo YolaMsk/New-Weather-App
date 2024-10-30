@@ -96,6 +96,7 @@ main {
   text-align: center;
   color: whitesmoke;
   margin-top: 10px;
+  margin-left: 10px;
   display: flex;
   justify-content: center;
 }
@@ -105,10 +106,9 @@ main {
 }
 
 .weather-app-icon {
-  font-size: 44px;
   margin-top: 10px;
-  width: 88px;
-  height: 88px;
+  width: 60px;
+  height: 60px;
 }
 
 .weather-app-temperature {
