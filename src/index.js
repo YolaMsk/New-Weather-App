@@ -43,6 +43,28 @@ function displayTemperature(response) {
   currentDateElement.innerHTML = formatDate(currentDate);
 }
 
+function displayForecast(){
+  let forecastElement =document. querySelector("#forecast");
+
+  let days = ["Tue","Wed","Thu","Fri","Sat",];
+
+let forecastHtml=""; 
+
+  days.forEach(function(day){
+    forecastHtml= forecastHtml +
+    `<div class="weather-forecast">
+    <div class="weather-forecast-day"> <div class="weather-forecast-date">${day}</div><div class="weather-forecast-icon">☀️</div>
+  <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-temperature">18°C</span>
+        <span class="weather-forecast-temperature">12°C</span>
+      </div>
+    </div> `;
+
+  });
+
+  forecastElement.innerHTML=forecastHtml
+}
+
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");
@@ -56,3 +78,6 @@ function search(event) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
+
+displayForecast();
+
