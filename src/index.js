@@ -55,7 +55,7 @@ let forecastHtml="";
     `<div class="weather-forecast">
     <div class="weather-forecast-day"> <div class="weather-forecast-date">${day}</div><div class="weather-forecast-icon">☀️</div>
   <div class="weather-forecast-temperatures">
-        <span class="weather-forecast-temperature">18°C</span>
+        <span class="weather-forecast-temperature"><strong>18°C</strong></span>
         <span class="weather-forecast-temperature">12°C</span>
       </div>
     </div> `;
